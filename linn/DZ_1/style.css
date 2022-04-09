@@ -1,6 +1,5 @@
  body {
-   margin: 0;
-   padding: 0;
+   margin: auto;
    background-color:green;
    display: flex;
    justify-content: center;
@@ -8,29 +7,35 @@
    height: 100vh;
 }
 
-.container {
-   width: 100%;
-   padding: 100%;
-   color: lightsteelblue;
-   margin: 0 auto;
-
-}
-
 #button {
-   padding: 25px;
+   padding: 20px;
    background-color: black;
-   margin: 30px;
    border-radius: 20px;
    font-size: 20px;
+   color: white;
+   text-decoration: none;
 }
 
 a {
    text-decoration: none;
 }
+.button {
+
+}
 #button2 {
-   padding: 25px;
-   background-color: black;
-   margin: 30px;
+   padding: 20px;
+   background-color: red;
    border-radius: 20px;
    font-size: 20px;
+   color: white;
+   text-decoration: none;
+}
+.button2 {
+}
+.house {
+   display: flex;
+   justify-content: space-between;
+   width: 300px;
+   height: 300px;
+   margin-top: 30px;
 }

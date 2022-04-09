@@ -37,15 +37,41 @@ deleteBtn.addEventListener("click", function (){
 // 2 задание //
 
 
-const parent = document.querySelector('#parent');
- const aElement = document.createElement('a');
- aElement.innerHTML = '0556-680-535';
- parent.appendChild(aElement);
- aElement.setAttribute('href',  `tel:0556680535`)
- const regex = /\W/gi
- const textPhoneNumber = aElement.textContent;
- const result = textPhoneNumber.replace(regex, '');
- console.log(result)
+// const parent = document.querySelector('#parent');
+//  const aElement = document.createElement('a');
+//  aElement.innerHTML = '0556-680-535';
+//  parent.appendChild(aElement);
+//  aElement.setAttribute('href',  `tel:0556680535`)
+//  const regex = /\W/gi
+//  const textPhoneNumber = aElement.textContent;
+//  const result = textPhoneNumber.replace(regex, '');
+//  console.log(result)
 
 
 
+ // 1 задание //
+  
+ const fruits = ["banana","strawbery","peach","cherry","melon"];
+
+const input = document.getElementById('input');
+const btn = document.getElementById('btn');
+
+
+function Search (e){
+    e.preventDefault()
+    fruits.forEach ( element => {
+        const regex = new RegExp(`${input.value}`, 'gi');
+        const result = regex.test(fruits)
+        if (input.value === ''){
+            alert('Поле пустое')
+        }
+        else if (result === false){
+            alert('Совпадения не найдены')
+        }
+        else if (result ===  true){
+            alert('Совпадения найдены')
+        }
+    })
+}
+
+btn.addEventListener('click', Search);
